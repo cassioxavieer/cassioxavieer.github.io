@@ -1,0 +1,354 @@
+/* soft reset do css */
+
+* {
+margin: 0;
+padding:0;
+ box-sizing: border-box;
+}
+
+body {
+  /*  background-image:url("../../../Creative Cloud Files/ESTUDOS/Site Cassiano Xavier/img/bg-site.jpg"); */
+   /* background-size: auto 100vh; */ /*  height: 100vh; */
+	  
+ font-family: 'Abel', sans-serif;
+ height: 100vh;
+text-decoration-color: #353333;
+	background-color:#FBFBFB;
+ background-size: auto 100vh;
+	
+		
+  
+/*font-size: 12px;  */	
+}
+
+
+
+
+/* se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 400px) {
+  body {
+    font-size:15px;
+  }
+}
+
+
+@media (min-width: 600px) {
+  body {
+    font-size:20px;
+  }
+}
+
+@media (min-width: 800) {
+  body {
+    font-size:30px;
+  }
+}
+
+@media  (min-width:1200px) {
+.container {
+margin-left:auto;
+margin-right: auto;        
+max-width: 1200px;}
+}
+
+@media (min-width:560px ){
+	.portfolio .grid{
+		grid-template-columns: 180px 180px;
+	}
+	
+}
+@media (min-width:700px ){
+	.portfolio .grid{
+		grid-template-columns: 180px 180px 180px;
+		justify-content: center;
+	}
+	
+}
+
+@media (min-width: 880px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 180px);
+    align-contenpot: center;
+    justify-content: center;
+    
+	 
+      
+  }
+}
+
+@media (min-width: 1000px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(5, 180px);
+    align-contenpot: center;
+    justify-content: center;
+    
+	 
+      
+  }
+}
+
+
+*/
+
+/*  breakpoint pontos de quebra da tela que precisam de ajustes  */
+
+/* breakpoint pontos de quebra da tela que precisam de ajustes 
+nesse ajuste fiz a tela mudar de cor e sair imagem do plano de fundo*/
+
+
+
+
+	 
+  
+	 
+header {    
+  height:100vh;   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	
+} 
+
+.menu {
+  background-color:#212121;
+	opacity: 40%;
+  position: fixed;
+  width:100vw; /*tamanho que a barra de menu ocupa */
+  top: 0px;
+z-index: 1 /*faz com que o menu tenha prioridade e os outros itens nao fiquem encavalados por cima*/
+}
+
+/*no displauy  mostra onde os itens vao ficar se e em cima tipo retangulo ou quadrado  em determinado canto */
+
+
+.menu ul {
+  display: flex;    
+  justify-content: space-around;
+	
+}
+
+sobre
+.menu a {  /*AQUI É ONDE FICA O CABEÇALHO CONTATO PORTIFOLIO E SOBRE*/
+  
+  display: block;
+     10px 10px;
+    transition: background 1s, color 1s;   /*aqui faz transiçao numa classe espeficica  
+    /*transition: all 2s  aqui faz para todas as classes... nao fazer e feio e errado*/
+}
+
+/*aqui ate a 118  faz a bSOBREarra de meno em cima muda de cor quando clica e segura*/
+.menu a:hover{
+background-color: #FFFDF7;
+    color:#1E5F67;
+}
+
+
+.menu a:active{       
+    background-color: #E7474A;
+    color:yellow;
+}
+a {
+  color:#E7474A;
+  text-decoration: none;
+	
+}
+
+
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+
+.site-subtitle, 
+.site-title {
+  color:#E7474A;
+  text-align: center;
+	
+	height: 20vh
+}
+
+.titulo{ /* as tags nessa classe altera o titulo */
+    transform: scale(0.8) translateY(20vh);
+    opacity: 0;
+    animation: linear 1s animacaotitulo forwards;  /* animation serve para animar a classe */
+}
+
+@keyframes animacaotitulo {  /* o @keyframe e a propiedade que chama a animaçao, veja que na tag titulio a animaçao foi para o estado escrito na tag */
+    100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+      
+}
+    }
+
+
+
+.titulo:hover {
+    transform: scale(0) translateY(0vh);
+    opacity: 2;
+    transition: all 2s; } 
+
+
+.site-title {
+  font-size: 2em;
+  font-family: 'Abel', sans-serif; font-style: oblique;
+line-height: 1em;	
+}
+
+.site-subtitle {
+  font-family: 'Abel', sans-serif;
+ line-height: 1em;
+}
+
+
+
+
+.sobre,
+.contato,
+.portfolio {
+padding: 2em;
+min-height:inherit;
+}
+
+  
+.sobre h2
+.contato h2, 
+.portfolio h2{
+  font-family: 'Abel', sans-serif;
+  color:#E7474A;
+  margin-bottom: 2em;
+  font-size: 2em;
+} 
+    
+.sobre p {
+    text-indent: 2em;
+    margin-bottom: 2em;
+    text-align:center;
+    color:#E7474A;
+	
+}
+/*  aqui e onde muda cor de fundo e do texto da frase imerssao css alura*/  
+.sobre a { color:aqua;  
+text-decoration: underline;
+}
+.sobre a:hover s{
+    background-color: brown;    
+}
+
+.sobre .avatar  {
+    float: center; 
+	margin-right: 1em;
+	text-align: center;
+}
+
+.alura{font-size: 1em }
+
+.alura a:hover{
+	background-color:#AB9125;
+}
+.sobre .avatar img{
+    border-radius: 1000px; 
+    clip-path: circle(50% at 50% 50%);
+    height: 180px;
+    width: 180px;
+
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 2em;  /* definir o espaçamenento entre cada coluna ou linha do grid */
+text-align: center; /* alinha texto com imagem */
+	
+}
+
+
+
+
+
+.portfolio figure {
+  
+	box-sizing: border-box;
+  	font-size: 20px;
+	text-align: center;
+/* alinha texto com imagem */
+	
+	
+}
+
+.img-portfolio {
+/*height: 180px; altura e largura fixa 
+ width: 240px;*/
+object-fit:cover;
+object-position:left bottom;
+transition: transform 200ms; 
+height: 180px;
+width: 180px; 
+border-radius: 4px;text-align: center;
+	text-align: center; /* alinha texto com imagem */
+}     
+   
+
+.img-portfolio:hover{      /*efeitos dentro da imagem */
+    transform: scale(2.5) rotate(360deg);
+    transition: transform 1000ms;
+    
+    
+    
+}
+
+.logo:hover {     /*efeitos dentro da imagem */
+    transform: scale(1.1) rotate(360deg);
+    transition: transform 100ms; 
+    
+    
+    
+}
+
+
+/*flip-card{
+    background-color: blueviolet; 
+    perspective: 500px; 
+}*/
+/*.card{
+    background-color: brown;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+.cardfrente, 
+.cardverso {
+backface-visibility: hidden;
+left:0;
+position:absolute;
+top:0;    
+}
+.cardverso{
+    background-color: aquamarine;
+    height: 180px;
+    width: 180px;
+    transform: rotateY(180deg)
+    
+}
+
+.flip-card:hover .card{
+    transform: rotateY(180deg) */
+
+.contato a{
+    color: #E7474A;
+	font-size: 1em;
+
+}
+   
+.contato .icons{
+	text-align:inherit;
+}
+
+.contato a:hover{
+    text-decoration: none;
+    text-shadow: 0px 0px 1px red;
+    }
+
+
+
