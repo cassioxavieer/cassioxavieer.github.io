@@ -8,13 +8,13 @@ padding:0;
 
 body {
   /*  background-image:url("../../../Creative Cloud Files/ESTUDOS/Site Cassiano Xavier/img/bg-site.jpg"); */
-   /* background-size: auto 100vh; */ /*  height: 100vh; */
+   /* background-size: auto 100vh; */ /*  */
 	  
  font-family: 'Abel', sans-serif;
- height: 100vh;
+  height: 100vh;
 text-decoration-color: #353333;
 	background-color:#FBFBFB;
- background-size: auto 100vh;
+ 
 	
 		
   
@@ -57,7 +57,7 @@ max-width: 1200px;}
 	}
 	
 }
-@media (min-width:700px ){
+@media (min-width:880px ){
 	.portfolio .grid{
 		grid-template-columns: 180px 180px 180px;
 		justify-content: center;
@@ -65,29 +65,21 @@ max-width: 1200px;}
 	
 }
 
-@media (min-width: 880px) {
+
+
+
+
+/*
+@media (min-width: 600px) {
   .portfolio .grid {
     grid-template-columns: repeat(3, 180px);
     align-contenpot: center;
     justify-content: center;
-    
+    height: calc(100vh - 4em - 20px );
 	 
       
   }
 }
-
-@media (min-width: 1000px) {
-  .portfolio .grid {
-    grid-template-columns: repeat(5, 180px);
-    align-contenpot: center;
-    justify-content: center;
-    
-	 
-      
-  }
-}
-
-
 */
 
 /*  breakpoint pontos de quebra da tela que precisam de ajustes  */
@@ -106,14 +98,13 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-	
 } 
 
 .menu {
   background-color:#212121;
-	opacity: 40%;
+	opacity: 60%;
   position: fixed;
-  width:100vw; /*tamanho que a barra de menu ocupa */
+  width:100vw;
   top: 0px;
 z-index: 1 /*faz com que o menu tenha prioridade e os outros itens nao fiquem encavalados por cima*/
 }
@@ -165,19 +156,17 @@ a:hover {
 .site-title {
   color:#E7474A;
   text-align: center;
-	
-	height: 20vh
 }
 
 .titulo{ /* as tags nessa classe altera o titulo */
-    transform: scale(0.8) translateY(20vh);
+    transform: scale(0.8) translateY(50vh);
     opacity: 0;
     animation: linear 1s animacaotitulo forwards;  /* animation serve para animar a classe */
 }
 
 @keyframes animacaotitulo {  /* o @keyframe e a propiedade que chama a animaçao, veja que na tag titulio a animaçao foi para o estado escrito na tag */
     100% {
-    transform: scale(1) translateY(0);
+    transform: scale(1.5) translateY(0);
     opacity: 1;
       
 }
@@ -187,7 +176,7 @@ a:hover {
 
 .titulo:hover {
     transform: scale(0) translateY(0vh);
-    opacity: 2;
+    opacity: 1;
     transition: all 2s; } 
 
 
@@ -225,9 +214,8 @@ min-height:inherit;
 .sobre p {
     text-indent: 2em;
     margin-bottom: 2em;
-    text-align:center;
+    text-align: justify;
     color:#E7474A;
-	
 }
 /*  aqui e onde muda cor de fundo e do texto da frase imerssao css alura*/  
 .sobre a { color:aqua;  
@@ -238,16 +226,9 @@ text-decoration: underline;
 }
 
 .sobre .avatar  {
-    float: center; 
-	margin-right: 1em;
-	text-align: center;
+    float: left; margin-right: 2em;
 }
 
-.alura{font-size: 1em }
-
-.alura a:hover{
-	background-color:#AB9125;
-}
 .sobre .avatar img{
     border-radius: 1000px; 
     clip-path: circle(50% at 50% 50%);
@@ -285,26 +266,20 @@ object-position:left bottom;
 transition: transform 200ms; 
 height: 180px;
 width: 180px; 
-border-radius: 4px;text-align: center;
+border-radius: 4px;
 	text-align: center; /* alinha texto com imagem */
 }     
    
 
 .img-portfolio:hover{      /*efeitos dentro da imagem */
-    transform: scale(2.5) rotate(360deg);
+    transform: scale(2) rotate(360deg);
     transition: transform 1000ms;
     
     
     
 }
 
-.logo:hover {     /*efeitos dentro da imagem */
-    transform: scale(1.1) rotate(360deg);
-    transition: transform 100ms; 
-    
-    
-    
-}
+
 
 
 /*flip-card{
@@ -337,13 +312,8 @@ top:0;
 
 .contato a{
     color: #E7474A;
-	font-size: 1em;
-
-}
-   
-.contato .icons{
-	text-align:inherit;
-}
+	font-size: 1em; }
+    
 
 .contato a:hover{
     text-decoration: none;
